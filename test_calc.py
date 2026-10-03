@@ -1,5 +1,9 @@
-from calc import add
+import pytest
 
 def test_add():
-    assert(2,2)==4
-    assert(1,2)==3
+    assert add(1, 2) == 3
+    assert add(-1, 1) == 0
+    assert add(-1, -1) == -2
+
+if __name__ == '__main__':
+    pytest.main([__file__])
